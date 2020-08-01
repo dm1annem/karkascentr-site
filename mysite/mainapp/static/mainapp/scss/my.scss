@@ -1,0 +1,113 @@
+@import "nullstyle.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap');
+
+// переменные основных цветов
+$color_1: #676c68;
+$color_2: #626763;
+$color_3: #566459;
+$color_4: #757b76;
+// https://colorscheme.ru/#2T11T1BhW6q6q  текущие цветовые схемы по этой ссылке
+//-------------------------------
+// breikpoints
+$fone: 320px;
+$smaller: 480px;
+$tablet: 768px;
+$medium: 960px;
+$desktop: 1200px;
+
+h1 {
+  // display: grid;
+  text-align: center;
+  font-size: 1.5rem;
+  color:rgb(39, 39, 39);
+  
+}
+h2 {
+  font-size: 1.4rem;
+  color:rgb(39, 39, 39);
+  text-align: center;
+}
+h3 {
+  font-size: 1.3rem;
+  color:rgb(39, 39, 39);
+  text-align: center;
+}
+
+
+body {
+  display: grid;
+  grid-template-areas:
+    "шапка"
+    "содержание"
+    "подвал";
+  grid-template-rows: minmax(100px, auto) minmax(70vh, auto) minmax(100px, auto);
+  font-family: 'Roboto', sans-serif, Verdana, Arial;
+}
+
+.header {
+  display: grid;
+  grid-area: шапка;
+  background-color: $color_1;
+  justify-content: center;
+}
+.main {
+  display: grid;
+  grid-area: содержание;
+  justify-content: center;
+}
+.footer {
+  display: grid;
+  grid-area: подвал;
+  background-color: $color_3;
+  justify-content: center;
+  align-content: start;
+}
+
+// ----------------------//
+.wrapper {
+  display: grid;
+  width: 100vw;
+  justify-content: center;
+  align-items: start;
+  align-content: start;
+  grid-template-areas: 
+  "банер банер банер"
+  ". контейнер .";
+  }
+.full_scrin{
+    display: grid;
+    justify-content: center;
+    width: 100vw;
+    grid-area: банер;
+}
+.conteiner {
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  padding: 0 20px;
+  width: $fone;
+  grid-area: контейнер;
+  @media screen and (min-width: $smaller) {
+    width: $smaller; 
+  }
+  @media screen and (min-width: $tablet) {
+    width: $tablet; 
+  }
+  @media screen and (min-width: $medium) {
+    width: $medium; 
+  }
+  @media screen and (min-width: $desktop) {
+    width: $desktop; 
+  }
+}
+
+.initial_scrin{
+  display: grid;
+  background-color: $color_4;
+  & h1{
+    color: #fafafa;
+  }
+  & h3{
+    color: #fafafa;
+  }
+}

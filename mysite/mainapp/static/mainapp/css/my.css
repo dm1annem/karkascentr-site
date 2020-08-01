@@ -1,0 +1,203 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #272727;
+}
+
+h2 {
+  font-size: 1.4rem;
+  color: #272727;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.3rem;
+  color: #272727;
+  text-align: center;
+}
+
+body {
+  display: grid;
+  grid-template-areas: "шапка" "содержание" "подвал";
+  grid-template-rows: minmax(100px, auto) minmax(70vh, auto) minmax(100px, auto);
+  font-family: "Roboto", sans-serif, Verdana, Arial;
+}
+
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  display: grid;
+  grid-area: шапка;
+  background-color: #676c68;
+  justify-content: center;
+}
+
+.main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  display: grid;
+  grid-area: содержание;
+  justify-content: center;
+}
+
+.footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  display: grid;
+  grid-area: подвал;
+  background-color: #566459;
+  justify-content: center;
+  align-content: start;
+}
+
+.wrapper {
+  display: grid;
+  width: 100vw;
+  justify-content: center;
+  align-items: start;
+  align-content: start;
+  grid-template-areas: "банер банер банер" ". контейнер .";
+}
+
+.full_scrin {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  display: grid;
+  justify-content: center;
+  width: 100vw;
+  grid-area: банер;
+}
+
+.conteiner {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  padding: 0 20px;
+  width: 320px;
+  grid-area: контейнер;
+}
+@media screen and (min-width: 480px) {
+  .conteiner {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .conteiner {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .conteiner {
+    width: 960px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .conteiner {
+    width: 1200px;
+  }
+}
+
+.initial_scrin {
+  display: grid;
+  background-color: #757b76;
+}
+.initial_scrin h1 {
+  color: #fafafa;
+}
+.initial_scrin h3 {
+  color: #fafafa;
+}
