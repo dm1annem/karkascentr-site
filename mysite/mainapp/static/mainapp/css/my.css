@@ -91,7 +91,7 @@ h6 {
 /*--------------------*/
 h1 {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #272727;
 }
 
@@ -102,7 +102,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #272727;
   text-align: center;
 }
@@ -193,7 +193,8 @@ body {
 
 .initial_scrin {
   display: grid;
-  background-color: #757b76;
+  background-image: url(/static/mainapp/img/fon5.jpg);
+  background-color: #265f32c9;
 }
 .initial_scrin h1 {
   color: #fafafa;
